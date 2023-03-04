@@ -1,8 +1,8 @@
 # Font-Awesome-Pro-6.0-Cheat-Sheat
 
-
-## 454 Brand Icons
-## 2525 Icons
+## Icons
+### 454 Brand Icons
+### 2525 Awesome Icons
 
 ## Icons
 ### Solid
