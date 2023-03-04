@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Website</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  </head>
+  <body>
+    <main>
+      <div class="pagetitle">
+        <h1>Font Awesome Pro 6.0</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Icons</li>
+            <li class="breadcrumb-item active">Font Awesome</li>
+          </ol>
+        </nav>
+      </div>
+      <!-- End Page Title -->
+
+      <div id="legend"></div>
+
+      <br />
+
+      <div id="icons"></div>
+
+      <br />
+
+      <div id="brands"></div>
+
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col"><i class="fa fa-camera fa-1x"></i>fa-1x</div>
+        <div class="col"><i class="fa fa-camera fa-2x"></i>fa-2x</div>
+        <div class="col"><i class="fa fa-camera fa-3x"></i>fa-3x</div>
+        <div class="col"><i class="fa fa-camera fa-4x"></i>fa-4x</div>
+        <div class="col"><i class="fa fa-camera fa-5x"></i>fa-5x</div>
+        <div class="col"><i class="fa fa-camera fa-6x"></i>fa-6x</div>
+        <div class="col"><i class="fa fa-camera fa-7x"></i>fa-7x</div>
+        <div class="col"><i class="fa fa-camera fa-8x"></i>fa-8x</div>
+        <div class="col"><i class="fa fa-camera fa-9x"></i>fa-9x</div>
+        <div class="col"><i class="fa fa-camera fa-10x"></i>fa-10x</div>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      $(function () {
+        fetch("./Font-Awesome-Pro-6.0/metadata/icons.json")
+          .then((res) => res.json())
+          .then(
+            (result) => {
+              var brandsList = "";
+              var brandsCount = "";
+              var iconsList = 0;
+              var iconsCount = 0;
+
+              Object.entries(result).forEach(myFunction);
+
+              function myFunction(item) {
+                try {
+                  if (item[1].styles.includes("brands")) {
+                    brandsList =
+                      brandsList +
+                      "<div class='row'>" +
+                      "<div class='col-4'>" +
+                      "<h6>" +
+                      item[1].label +
+                      "</h6>" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-brands fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "</div>";
+                    brandsCount++;
+                  } else {
+                    iconsList =
+                      iconsList +
+                      "<div class='row'>" +
+                      "<div class='col-2'>" +
+                      "" +
+                      item[1].label +
+                      "" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-solid fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-regular fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-light fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-duotone fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "<div class='col-2'>" +
+                      "<i class='fa-thin fa-2x fa-" +
+                      item[0] +
+                      "'></i>" +
+                      "</div>" +
+                      "</div>";
+                    iconsCount++;
+                  }
+                } catch (e) {}
+              }
+
+              $("#legend").html(
+                "<div class='row'>" +
+                  "<div class='col-2'>" +
+                  brandsCount +
+                  " Brand Icons</div>" +
+                  "<div class='col-2'>" +
+                  iconsCount +
+                  " Icons</div>" +
+                  "</div>"
+              );
+
+              $("#brands").html(brandsList);
+
+              $("#icons").html(
+                "<div class='pagetitle'>" +
+                  "<div class='row'>" +
+                  "<div class='col-2'>" +
+                  "<h1>Icon</h1>" +
+                  "</div>" +
+                  "<div class='col-2'>" +
+                  "<h1>Solid</h1>" +
+                  "</div>" +
+                  "<div class='col-2'>" +
+                  "<h1>Regular</h1>" +
+                  "</div>" +
+                  "<div class='col-2'>" +
+                  "<h1>Light</h1>" +
+                  "</div>" +
+                  "<div class='col-2'>" +
+                  "<h1>Duotone</h1>" +
+                  "</div>" +
+                  "<div class='col-2'>" +
+                  "<h1>Thin</h1>" +
+                  "</div>" +
+                  "</div>" +
+                  "</div>" +
+                  iconsList
+              );
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+      });
+    </script>
+  </body>
+</html>
