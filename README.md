@@ -1,11 +1,3 @@
-<!--
-Hey, thanks for using the awesome-readme-template template.  
-If you have any enhancements, then fork this project and create a pull request 
-or just open an issue with the label "enhancement".
-
-Don't forget to give this project a star for additional support ;)
-Maybe you can mention me or this repo in the acknowledgements too
--->
 <div align="center">
 
   <img src="assets/logo.png" alt="logo" width="200" height="auto" />
@@ -13,16 +5,10 @@ Maybe you can mention me or this repo in the acknowledgements too
   
   <p>
     An awesome cheat sheet for Font Awesome Pro 6.0.
-    ## Icons
-### 454 Brand Icons
-### 2525 Awesome Icons
-    
-## Icons
-### Solid
-### Regular
-### Light
-### Duotone
-### Thin
+Icons - 454 Brand Icons - 2525 Awesome Icons
+   
+## Icons (Solid/Regular/Light/Duotone/Thin)
+
   </p>
   
   
