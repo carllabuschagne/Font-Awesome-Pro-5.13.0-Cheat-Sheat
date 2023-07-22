@@ -10,8 +10,7 @@ Icons - 454 Brand Icons - 2525 Awesome Icons
 ## Icons (Solid/Regular/Light/Duotone/Thin)
 
   </p>
-  
-  
+    
 <!-- Badges -->
 <p>
   <a href="https://github.com/Louis3797/awesome-readme-template/graphs/contributors">
