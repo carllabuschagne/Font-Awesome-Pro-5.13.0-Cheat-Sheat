@@ -5,10 +5,8 @@
   
   <p>
     An awesome cheat sheet for Font Awesome Pro 6.0.
-Icons - 454 Brand Icons - 2525 Awesome Icons
-   
+Icons - 454 Brand Icons - 2525 Awesome Icons   
 ## Icons (Solid/Regular/Light/Duotone/Thin)
-
   </p>
     
 <!-- Badges -->
